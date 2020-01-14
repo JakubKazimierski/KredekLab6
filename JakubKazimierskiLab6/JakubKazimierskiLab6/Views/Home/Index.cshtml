@@ -1,0 +1,30 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+
+        <!-- reference to string-->
+        <h3>@Model</h3>
+
+        <!--Home controller reference-->
+        @Html.ActionLink("Informacje o prywatności", "Privacy", "Home");
+
+        @Html.ActionLink("Linki", "InterestingLinks", "Home");
+
+        <hr />
+        <!--przejscie do podstrony ze wszystkimi samochodami-->
+        <h3>@Html.ActionLink("Pokaż wszystkie samochody", "GetAllCars", "Home")</h3>
+
+        <hr />
+        <!--przejscie do podstrony ze wszystkimi modelami-->
+        <h3>@Html.ActionLink("Pokaż wszystkie modele", "GetListOfModels", "Home")</h3>
+
+        <hr/>
+        <!--przejscie do formularza-->
+        <h3>@Html.ActionLink("Formularz", "ContactForm", "Home")</h3>
+
+    </div>
